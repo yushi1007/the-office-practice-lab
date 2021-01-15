@@ -17,7 +17,7 @@ Here are some questions to consider:
 ## Here are our deliverables:
 _Keep in mind that in order to properly build out the relationships between the three models, one of these classes will be instantiated with objects of others. This will not be mentioned in the description below, you need to deduce it on your own. Consider where and how this dependency needs to be implemented._
 ​
-**`Manager`**
+### **`Manager`**
   * Manager is initialized with a name, department and age. All of these attributes can change.
   * `Manager#name`
     * returns a `String` that is the manager's name
@@ -36,7 +36,7 @@ _Keep in mind that in order to properly build out the relationships between the 
   * `Manager.average_age`
     * returns a `Float` that is the average age of all the managers
 ​
-**`Employee`**
+### **`Employee`**
   * Employee is initialized with a name and salary. All of these attributes can change.
   * `Employee#name`
     * returns a `String` that is the employee's name
@@ -57,7 +57,7 @@ _Keep in mind that in order to properly build out the relationships between the 
   * `Employee#get_promoted`
     * takes an argument of an instance of a Role, updates Employee's role and increases Employee's salary.
 ​
-**`Role`**
+#### **`Role`**
   * Role is initialized with a name, which won't ever change.
   * `Role#name`
     * returns a `String` that is the role's name
