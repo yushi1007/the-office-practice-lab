@@ -57,7 +57,7 @@ _Keep in mind that in order to properly build out the relationships between the 
   * `Employee#get_promoted`
     * takes an argument of an instance of a Role, updates Employee's role and increases Employee's salary.
 ​
-#### **`Role`**
+### **`Role`**
   * Role is initialized with a name, which won't ever change.
   * `Role#name`
     * returns a `String` that is the role's name
