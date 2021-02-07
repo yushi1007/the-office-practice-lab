@@ -23,13 +23,21 @@ class Employee
 
     def manager
     # get all the manager -> get the instance of manager
-    # binding.pry
+    #binding.pry
     self.role.map{|role| role.manager}
     #self.role.map(&:manager)
     end
-
-
-   # def role
-       # binding.pry
-    #end
+    def self.paid_over(salary)
+        # binding.pry
+        self.all.select{|employee| employee.salary >= salary}
+    end
 end
+
+
+
+# Employee.find_by_department
+# takes a String argument that is the name of a department and returns the first employee whose manager is working in that department
+# Employee.search_by_role
+# takes a String argument that is the name of a role and returns all the employees who work at that role
+# Employee#get_promoted
+# takes an argument of an instance of a Role, updates Employee's role and increases Employee's salary.​

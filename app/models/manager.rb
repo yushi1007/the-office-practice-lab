@@ -16,9 +16,12 @@ class Manager
         @@all    
     end
 
-    #def department
+    def employees 
+        binding.pry 
+        Role.all.select{|manager| manager == yu}
+    end
 
-    #end
+    
 end
 
 #binding pry
