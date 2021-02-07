@@ -18,9 +18,9 @@ class Role
     end
 
     #returns an array of all the Employees who work at that role
-    def employees
+    #def employees
     
-    end
+    #end
     #def employees
      #    binding.pry
     #Employee.all.select{|employee| employee.role == self}

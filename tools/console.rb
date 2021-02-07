@@ -27,11 +27,11 @@ coffee_maker = Role.new("Coffee Maker", ben, sandra)
 # ben.manager
 #Employee.all
 #ben.employees
-# lisa.role
+#lisa.role
 # lisa.manager
-Employee.paid_over(50000)
+#Employee.paid_over(50000)
 #ben.role
-
+Employee.find_by_department("Design")
 
 #yu.employees
 binding.pry

@@ -29,7 +29,11 @@ class Employee
     end
     def self.paid_over(salary)
         # binding.pry
-        self.all.select{|employee| employee.salary >= salary}
+        self.all.select{|employee| employee.salary >= salary} 
+    end
+    def self.find_by_department(department)
+      # Manager.all.find{|manager| manager.department == "Design"}
+        binding.pry
     end
 end
 
