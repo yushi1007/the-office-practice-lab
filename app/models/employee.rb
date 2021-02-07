@@ -3,7 +3,7 @@ class Employee
     
     @@all = []
 
-    attr_accessor :name, :salary, :employees
+    attr_accessor :name, :salary
 
     def initialize(name, salary)
         @name = name
@@ -14,29 +14,22 @@ class Employee
     def self.all
         @@all
     end
-
-<<<<<<< HEAD
-    def employees
-        binding.pry
+    # returns an instance of their manager
+    def role
+    # get all the employee's role
+    # binding.pry
+        Role.all.select{|role| role.employee == self}
     end
-    #def manager
-    #binding.pry
+
+    def manager
+    # get all the manager -> get the instance of manager
+    # binding.pry
+    self.role.map{|role| role.manager}
+    #self.role.map(&:manager)
+    end
+
+
+   # def role
+       # binding.pry
     #end
-
-
-=======
-        #1. pass argumet of employees name 
-        #2. itirate over all roles and return that employees   roles instances 
-        # returns an instance of their manager
-        
-    def self.employees(name)
-        Role.all.select{|role| role.employee.name == name}
-    end 
-
-
-    # def manager 
-    #     self.employees.map
-    # end 
-
->>>>>>> 04a64f1138ad1c05518029d8c54eea9115602159
 end
