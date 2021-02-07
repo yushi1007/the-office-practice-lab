@@ -1,3 +1,4 @@
+require 'pry'
 class Employee
     
     @@all = []
@@ -13,5 +14,13 @@ class Employee
     def self.all
         @@all
     end
+
+    def employees
+        binding.pry
+    end
+    #def manager
+    #binding.pry
+    #end
+
 
 end

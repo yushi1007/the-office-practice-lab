@@ -16,6 +16,11 @@ class Role
     def self.all
         @@all
     end
+
+    #def employees
+     #    binding.pry
+    #Employee.all.select{|employee| employee.role == self}
+    #end 
     
 end
 

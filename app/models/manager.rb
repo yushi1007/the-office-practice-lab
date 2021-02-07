@@ -16,7 +16,9 @@ class Manager
         @@all    
     end
 
-    
+    #def department
+
+    #end
 end
 
 #binding pry
