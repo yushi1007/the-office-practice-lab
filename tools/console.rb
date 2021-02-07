@@ -13,7 +13,7 @@ mark = Employee.new("Mark", 50000) # one role, one manager
 sally = Employee.new("Sally", 60000) # no role
 
 yu = Manager.new("Yu", "Accounting", 35) # managing one
-ted = Manager.new("Ted", "Tech", 45) # managing two
+yu = Manager.new("Yu", "Accounting", 35) # managing two
 bob = Manager.new("Bob", "HR", 22) #managing none
 sandra = Manager.new("Sandra", "Design", 56) #managing two
 
@@ -25,6 +25,8 @@ coffeemaker = Role.new("Coffee Maker", ben, sandra)
 
 # project_manager.employee
 # ben.manager
-Employee.all
+
+yu.employees
 binding.pry
+puts "hello"
 0 #leave this here to ensure binding.pry isn't the last line

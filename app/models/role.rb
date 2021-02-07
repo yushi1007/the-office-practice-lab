@@ -17,6 +17,9 @@ class Role
         @@all
     end
     
+    def add_employee(name_str, salary, manager)
+        Role.new(name_str, salary, manager)
+    end 
 end
 
 #binding pry
