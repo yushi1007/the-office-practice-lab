@@ -23,8 +23,14 @@ designer = Role.new("Designer", lisa, ted)
 copywriter = Role.new("Copywriter", mark, sandra)
 coffeemaker = Role.new("Coffee Maker", ben, sandra)
 
+<<<<<<< HEAD
 #project_manager.employees
 #ben.manager
 ben.employees
+=======
+# project_manager.employee
+# ben.manager
+Employee.all
+>>>>>>> a50b69cd49dd2f72184038b1fc9bbe10a4fecf8c
 binding.pry
 0 #leave this here to ensure binding.pry isn't the last line
