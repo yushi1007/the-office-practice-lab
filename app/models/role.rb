@@ -3,13 +3,10 @@ class Role
 
     @@all = []
 
-    attr_reader :name
-    attr_accessor :employee, :manager
+    attr_accessor :name
 
-    def initialize(name, employee, manager)
+    def initialize(name)
         @name = name
-        @employee = employee
-        @manager = manager
         @@all << self
     end
 
@@ -18,13 +15,18 @@ class Role
     end
 
     #returns an array of all the Employees who work at that role
-    #def employees
+    def employees
+        Employee.all.select{|employee| employee.role == self}
     
-    #end
-    #def employees
-     #    binding.pry
-    #Employee.all.select{|employee| employee.role == self}
-    #end 
+    end
+    
+    
+    def manager
+    # get all the manager -> get the instance of manager
+    #binding.pry
+    self.employee.map{|employee| employee.manager}.uniq
+    #self.role.map(&:manager)
+    end
     
     def add_employee(name_str, salary, manager)
         Role.new(name_str, salary, manager)
