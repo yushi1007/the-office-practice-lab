@@ -1,4 +1,4 @@
-#require 'pry'
+require 'pry'
 class Manager
     
     @@all = []
@@ -16,12 +16,19 @@ class Manager
         @@all    
     end
 
-    # def employees 
-    #     binding.pry 
-    #     Role.all.select{|manager| manager == self}
-    # end
+    def employees 
+    #binding.pry 
+    #Select all the employees that the manager oversees
+    Employee.all.select{|employee| employee.manager == self}
+    end
 
+    def roles
+    Role.all.select{|role| role.manager == self}
+    end
     
+    def self.all_department
+    self.all.map{|manager| manager.department}.uniq
+    end
 end
 
 #binding pry

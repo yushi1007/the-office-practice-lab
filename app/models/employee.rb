@@ -1,4 +1,4 @@
-require 'pry'
+#require 'pry'
 class Employee
     
     @@all = []
@@ -25,7 +25,7 @@ class Employee
 
     
     def self.paid_over(salary)
-        # binding.pry
+        #binding.pry
         self.all.select{|employee| employee.salary >= salary} 
     end
 
@@ -34,11 +34,11 @@ class Employee
         self.all.map{ |employee| employee.manager}
     end
 
-    def self.find_by_department(department)
-    #   # Manager.all.find{|manager| manager.department == "Design"}
-    # # Role.all.find{|role| role.manager.department == "Design"}  
-     binding.pry
-    end
+    # def self.find_by_department(department)
+    # #   # Manager.all.find{|manager| manager.department == "Design"}
+    # # # Role.all.find{|role| role.manager.department == "Design"}  
+    #  #binding.pry
+    # end
 
     # def self.search_by_role(role_name)
     #     binding.pry

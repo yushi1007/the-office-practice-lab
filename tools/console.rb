@@ -34,11 +34,14 @@ sally = Employee.new("Sally", 60000, bob, coffee_maker) # no role
 #ben.employees
 #lisa.role
 # lisa.manager
-#Employee.paid_over(50000)
+# #Employee.paid_over(50000)
 #ben.role
-Employee.find_by_department("Design") # expect to get Lisa
+#Employee.find_by_department("Design") # expect to get Lisa
 # Employee.search_by_role("Designer")
 #yu.employees
+ted.employees 
+yu.roles
+
 binding.pry
 #puts "hello"
 0 #leave this here to ensure binding.pry isn't the last line
