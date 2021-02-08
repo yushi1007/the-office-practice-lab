@@ -17,6 +17,7 @@ ted = Manager.new("ted", "Accounting", 35) # managing two
 bob = Manager.new("Bob", "HR", 22) #managing none
 sandra = Manager.new("Sandra", "Design", 56) #managing two
 
+
 project_manager = Role.new("Project Manager", ben, yu) 
 accounts_director = Role.new("Accounts Director", lisa, ted) 
 designer = Role.new("Designer", lisa, sandra)
@@ -31,8 +32,8 @@ coffee_maker = Role.new("Coffee Maker", ben, sandra)
 # lisa.manager
 #Employee.paid_over(50000)
 #ben.role
-Employee.find_by_department("Design")
-
+# Employee.find_by_department("Design") # expect to get Lisa
+Employee.search_by_role("Designer")
 #yu.employees
 binding.pry
 #puts "hello"
