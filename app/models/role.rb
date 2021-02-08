@@ -6,7 +6,7 @@ class Role
     attr_reader :name
     attr_accessor :employee, :manager
 
-    def initialize(name, employee, manager)
+    def initialize(name)
         @name = name
         @employee = employee
         @manager = manager

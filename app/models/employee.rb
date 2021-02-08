@@ -5,7 +5,7 @@ class Employee
 
     attr_accessor :name, :salary
 
-    def initialize(name, salary)
+    def initialize(name, salary, manager, role)
         @name = name
         @salary = salary
         @@all << self
