@@ -3,11 +3,13 @@ class Employee
     
     @@all = []
 
-    attr_accessor :name, :salary
+    attr_accessor :name, :salary, :manager, :role
 
     def initialize(name, salary, manager, role)
         @name = name
         @salary = salary
+        @role = role
+        @manager = manager
         @@all << self
     end
 
@@ -21,22 +23,22 @@ class Employee
         Role.all.select{|role| role.employee == self}
     end
 
-    def manager
-    # get all the manager -> get the instance of manager
-    #binding.pry
-    self.role.map{|role| role.manager}
-    #self.role.map(&:manager)
-    end
+    
     def self.paid_over(salary)
         # binding.pry
         self.all.select{|employee| employee.salary >= salary} 
     end
 
-    # def self.find_by_department(department)
+    def self.all_managers
+        #return all managers
+        self.all.map{ |employee| employee.manager}
+    end
+
+    def self.find_by_department(department)
     #   # Manager.all.find{|manager| manager.department == "Design"}
     # # Role.all.find{|role| role.manager.department == "Design"}  
-    #   binding.pry
-    # end
+     binding.pry
+    end
 
     # def self.search_by_role(role_name)
     #     binding.pry

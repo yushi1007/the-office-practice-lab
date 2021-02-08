@@ -16,10 +16,10 @@ class Manager
         @@all    
     end
 
-    def employees 
-        binding.pry 
-        Role.all.select{|manager| manager == yu}
-    end
+    # def employees 
+    #     binding.pry 
+    #     Role.all.select{|manager| manager == self}
+    # end
 
     
 end
